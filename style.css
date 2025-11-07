@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body{
+    display: block;
+    height: 100vh;
+    background-color: #f0f0f0;
+    
+}
+.game-container{
+    display: flex;
+   
+     background:  #272343;
+     width: 100%;
+    height: 91%;
+    padding: 1px 0px 5px;
+}
+.head{
+    display: flex;
+    padding: 10px;
+    background:  #ef7e56;
+  
+
+}
+.head h1{
+   text-align: left;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 2.5rem;
+   color: #fff;
+}
+.head .user{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 200px;
+    
+    margin-left: auto;
+    font-size: 1.5rem;
+}
+.user #username{
+    font-size: 1.5rem;
+     text-align: bottom;
+     color: #fff;
+     margin: 5px;
+}
+.game-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 84%;
+    height: 100%;
+    border-right: 1px solid #ef7e56;
+    position: relative;
+    background-color: #272343;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.card-container{
+    perspective: 1000px;
+    width:90%;
+    height:90%;
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+   
+}
+
+.tasted{
+     position: absolute;
+    width:110%;
+    height:100%;
+    background: #790707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 0.6s  ease;
+    border-radius: 10px;
+}
+.card{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 0.6s  ease;
+    border-radius: 10px;
+}
+.card-front, .card-back{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+   
+     border-radius: 10px;
+}
+.card-front{
+background: linear-gradient(140deg, #ea7659 70%, #272343) ;
+}
+.card-front img{
+    width: 100px;
+}
+.card-back img{
+    width: 80px;
+}
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #404969;
+}
+
+
+.flipped{
+    transform: rotateY(180deg);
+    transition: transform 0.6s;
+}
+ .game-info{
+    display: flex;
+    flex-direction: column;
+    width: 229px;
+    height: 90vh;
+    
+    margin-left: 10px;
+     
+ background:  #272343;
+} 
+.game-info .score-container{
+    border-bottom: 3px solid #ef7e56;
+    height: 109px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+}
+.score-container h1{
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid #ef7e56;
+}
+.score-container h3{
+    margin-top: 10px;
+    border-bottom: 1px solid #ef7e56;
+    color: #d6e4f0;
+}
+.score-container span {
+   margin-left: 100px;
+    font-size: 1.2rem;
+}
+#high-score{
+    margin-left: 53px;
+     font-size: 1.2rem;
+}
+.moves-container{
+   border-bottom: 3px solid #ef7e56;
+    height: 100px;
+}
+.moves-container h1{
+      text-align: center;
+    color: #fff;
+ 
+}
+.moves-container p{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+.time-container{
+      border-bottom: 3px solid #ef7e56;
+    height: 110px;
+}
+.time-container h1{
+        text-align: center;
+    color: #fff;
+  
+}
+.time-container p{
+       font-size: 2.5rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+
+.buttons{
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #ef7e56;
+}
+button{
+    margin: 10px;
+    width: 180px;
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    background-color: #ef7e56;
+    color: #dfffdf;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover{
+
+    background: #404969;
+}
+button:active{
+    background-color: #272343;
+}
+.leaderboard {
+margin: 5px;
+height: 300px;
+}
+.leaderboard h1{
+    text-align: center;
+    margin-bottom: 5px;
+    color: #fbfbfb;
+}
+#leaderboard  li{
+    
+    list-style: none;
+    /* margin-bottom: 5px; */
+    padding: 10px;
+
+    font-size: 1rem;
+    color: #d6e4f0;
+}
+
+#leaderboard:first-child{
+    background-color: gold;
+}
