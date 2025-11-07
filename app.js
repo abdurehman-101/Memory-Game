@@ -46,7 +46,6 @@ const createElement = function(value){
    const img = document.createElement('img');
    img.src = 'images/game.png';
 
-   
    container.classList.add('card-container');
    card.classList.add('card');
    front.classList.add('card-front');
@@ -72,7 +71,7 @@ startBtn.addEventListener('click', () => {
   // Stop flipping after 3s, start updateTimer interval
   setTimeout(() => {
     clearInterval(timer);
-    clearInterval(interval); // stop old timer if any
+    clearInterval(interval); 
     interval = setInterval(updateTimer, 1000);
   }, 4000);
 });
