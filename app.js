@@ -75,8 +75,6 @@ startBtn.addEventListener('click', () => {
     interval = setInterval(updateTimer, 1000);
   }, 4000);
 });
-
-
 };
 
 function shuffleCards(){
@@ -91,12 +89,10 @@ function shuffleCards(){
          
          createElement(fil[cardId]);
       }
-
       if(cardArray.length == 16) return cardArray;
    }
 }
 
-console.log(shuffleCards());
 let clickCount = 0;
 var cardValue = [];
 let indexHolder = [];
@@ -175,7 +171,6 @@ back.forEach( (data, index) => {
          }
       }
 
-
       const allCorrect = [...back].every(el => el.classList.contains('yes'))
       if(allCorrect){
          console.log('correct');
@@ -223,9 +218,8 @@ function addScore(name, score) {
   leaderboard = leaderboard.slice(0, 5);
   localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
 
-  showLeaderboard(); // always update display
+  showLeaderboard(); 
 }
-
 
 function showLeaderboard() {
   const list = document.querySelector('#leaderboard');
