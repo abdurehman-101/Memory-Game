@@ -44,6 +44,6 @@ Only the top 5 scores are displayed.
 
 🔉 Add sound effects
 
-🌈 Theme customization
+  Theme customization
 
 📱 Mobile-friendly improvements
